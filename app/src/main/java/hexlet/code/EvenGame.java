@@ -12,23 +12,23 @@ public class EvenGame {
 
         while (winningCount < 3) {
             int randomNumber = r.nextInt(100) + 1;
-            boolean isEvenRandomNumber = (randomNumber % 2) == 0;
+            boolean isEvenNumber = (randomNumber % 2) == 0;
             System.out.println("Question: " + randomNumber);
-            System.out.println("Your answer is: ");
+            System.out.print("Your answer is: ");
             String userAnswer = scanner.next();
 
-            if ((isEvenRandomNumber && userAnswer.equalsIgnoreCase("yes")) ||
-            ((!isEvenRandomNumber) && userAnswer.equalsIgnoreCase("no"))) {
+            if ((isEvenNumber && userAnswer.equalsIgnoreCase("yes")) ||
+            ((!isEvenNumber) && userAnswer.equalsIgnoreCase("no"))) {
                 winningCount += 1;
                 System.out.println("Correct!");
-            } else if (isEvenRandomNumber && userAnswer.equalsIgnoreCase("no")) {
+            } else if (isEvenNumber && userAnswer.equalsIgnoreCase("no")) {
                 System.out.println(userAnswer + " is wrong answer ;(. Correct answer was 'yes'");
                 break;
-            } else if ((!isEvenRandomNumber) && userAnswer.equalsIgnoreCase("yes")) {
+            } else if ((!isEvenNumber) && userAnswer.equalsIgnoreCase("yes")) {
                 System.out.println(userAnswer + " is wrong answer ;(. Correct answer was 'no'");
                 break;
             } else {
-                if (isEvenRandomNumber) {
+                if (isEvenNumber) {
                     System.out.println(userAnswer + " is wrong answer ;(. Correct answer was 'yes'");
                     break;
                 } else {
