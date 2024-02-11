@@ -5,14 +5,23 @@ import java.util.Scanner;
 public class App {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        System.out.print("Please enter the game number and press Enter. \n 1. Greet \n 0. Exit \n Your choice: ");
-        String gameNumber = scanner.next();
+        System.out.print("Please enter the game number and press Enter. \n 1. Greet \n 2. Even \n 0. Exit \n Your choice: ");
+        int gameNumber = scanner.nextInt();
 
-        if (gameNumber.equals("1")) {
-            Cli.userGreet();
-        } else {
-            System.out.println("Exit was choosen");
-            scanner.close();
+        switch (gameNumber) {
+            case 1 :
+                Cli.userGreet();
+                //Cli.userGreet();
+                break;
+            case 2 :
+                String name = Cli.userGreet();
+                //Cli.userGreet();
+                EvenGame.evenGame(name);
+                //EvenGame.evenGame();
+                break;
+            case 0 :
+                System.out.println("Exit was choosen");
+                break;
         }
     }
 }
