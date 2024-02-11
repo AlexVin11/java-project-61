@@ -16,9 +16,7 @@ public class App {
                 break;
             case 2 :
                 String name = Cli.userGreet();
-                //Cli.userGreet();
                 EvenGame.evenGame(name);
-                //EvenGame.evenGame();
                 break;
             case 0 :
                 System.out.println("Exit was choosen");

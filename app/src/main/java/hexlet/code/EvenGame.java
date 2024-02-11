@@ -17,8 +17,8 @@ public class EvenGame {
             System.out.print("Your answer is: ");
             String userAnswer = scanner.next();
 
-            if ((isEvenNumber && userAnswer.equalsIgnoreCase("yes")) ||
-            ((!isEvenNumber) && userAnswer.equalsIgnoreCase("no"))) {
+            if ((isEvenNumber && userAnswer.equalsIgnoreCase("yes"))
+                    || ((!isEvenNumber) && userAnswer.equalsIgnoreCase("no"))) {
                 winningCount += 1;
                 System.out.println("Correct!");
             } else if (isEvenNumber && userAnswer.equalsIgnoreCase("no")) {
