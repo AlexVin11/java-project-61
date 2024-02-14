@@ -4,4 +4,4 @@
 [![Maintainability](https://api.codeclimate.com/v1/badges/6d1dc4b10fa94dcdbce7/maintainability)](https://codeclimate.com/github/AlexVin11/java-project-61/maintainability)
 # Terminal records
 [EvenGame demo. asciinema record (step 5 of java-project-61)](https://asciinema.org/connect/bf42df32-5210-4d3d-853d-11ddf147ba2c)
-
+[CalcGame demo. asciinema record (step 6 of java-project-61)](https://asciinema.org/a/1wH8U0C7ibRyTP5YOtEeEwX1p)
