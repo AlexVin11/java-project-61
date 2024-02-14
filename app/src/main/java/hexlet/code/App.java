@@ -1,10 +1,16 @@
 package hexlet.code;
 
+import hexlet.code.games.Calc;
+import hexlet.code.games.EvenGame;
+
 import java.util.Scanner;
 
 public class App {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
+        //gaming rules taken from the static variables in games
+        String evenGameRules = EvenGame.evenGameRules;
+        String calcGameRules = Calc.calcGameRules;
         System.out.println("Please enter the game number and press Enter. ");
         System.out.print(" 1. Greet \n 2. Even \n 3. Calc \n 0. Exit \n Your choice: ");
         int gameNumber = scanner.nextInt();
@@ -14,15 +20,15 @@ public class App {
                 Cli.userGreet();
                 break;
             case 2 :
-                String name2 = Cli.userGreet();
-                EvenGame.evenGame(name2);
+                String[][] argumentsEvenGames = EvenGame.evenGame();
+                Engine.engine(argumentsEvenGames, evenGameRules);
                 break;
             case 3 :
-                String name3 = Cli.userGreet();
-                Calc.calc(name3);
+                String[][] argumentsCalcGames = Calc.calc();
+                Engine.engine(argumentsCalcGames, calcGameRules);
                 break;
             case 0 :
-                System.out.println("Exit was choosen");
+                System.out.println("Exit was chosen");
                 break;
             default:
                 System.out.print("Unknown command.");
