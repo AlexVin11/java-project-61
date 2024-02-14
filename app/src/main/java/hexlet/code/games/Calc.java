@@ -8,9 +8,11 @@ public class Calc {
     public static String[][] calc() {
         Random r = new Random();
         char[] operators = {'+', '-', '*'};
-        //двумерный массив содержащий 3 выражения которые будут показаны пользователю (3 строки первого столбца) для
-        //вычисления и правильные ответы (второй столбец, 3 строки) с которыми нужно сверяться
+        //2d massive 3 lines 2 columns
+        //first column contains game expression that will be shown to user
+        //second column contains correct answer
         String[][] questionAndCorrectAnswer = new String[3][2];
+
         for (int i = 0; i < 3; i++) {
             var firstNumber = r.nextInt(50) + 1;
             var secondNumber = r.nextInt(50) + 1;
@@ -21,13 +23,12 @@ public class Calc {
             var expressionForCalculate = new StringBuilder();
             expressionForCalculate.append(processedFirstNumber);
             expressionForCalculate.append(" ");
-            //здесь char элемент массива operators конвертируется в строку и добавляется в итоговую строку
+            //char element of operators converted in string and appended
             expressionForCalculate.append(Character.toString(operators[charIndexGenerator]));
             expressionForCalculate.append(" ");
             expressionForCalculate.append(processedSecondNumber);
-            //сформировал итоговую строку- выражение
+            //final expression
             String expression = expressionForCalculate.toString();
-            //поместил выражение которое будет показано пользователю в массив
             questionAndCorrectAnswer[i][0] = expression;
 
             if (operators[charIndexGenerator] == '+') {
@@ -38,7 +39,6 @@ public class Calc {
                 resultOfExpression = firstNumber * secondNumber;
             }
 
-            //вычисленное выражение перевел в строку и пометил в массив
             questionAndCorrectAnswer[i][1] = Integer.toString(resultOfExpression);
         }
 

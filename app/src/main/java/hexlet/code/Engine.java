@@ -42,8 +42,8 @@ public class Engine {
         if (winningCount == 3) {
             System.out.print("Congratulation, " + userName + " !");
         } else {
-            System.out.println("'" + userAnswer + "' is wrong answer ;(. Correct answer was " +
-                    "'" + arguments[i][1] + "'");
+            System.out.println("'" + userAnswer + "' is wrong answer ;(. Correct answer was "
+                    + "'" + arguments[i][1] + "'");
             System.out.print("Lets try again, " + userName + "!");
         }
     }
