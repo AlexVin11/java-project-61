@@ -1,7 +1,7 @@
 package hexlet.code;
 
 import hexlet.code.games.Calc;
-import hexlet.code.games.EvenGame;
+import hexlet.code.games.Even;
 import hexlet.code.games.Gcd;
 
 import java.util.Scanner;
@@ -10,7 +10,7 @@ public class App {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         //gaming rules taken from the static variables in games
-        String evenGameRules = EvenGame.evenGameRules;
+        String evenGameRules = Even.evenGameRules;
         String calcGameRules = Calc.calcGameRules;
         String gcdGameRules = Gcd.gcdGameRules;
         System.out.println("Please enter the game number and press Enter. ");
@@ -22,7 +22,7 @@ public class App {
                 Cli.userGreet();
                 break;
             case 2 :
-                String[][] argumentsEvenGames = EvenGame.evenGame();
+                String[][] argumentsEvenGames = Even.even();
                 Engine.engine(argumentsEvenGames, evenGameRules);
                 break;
             case 3 :

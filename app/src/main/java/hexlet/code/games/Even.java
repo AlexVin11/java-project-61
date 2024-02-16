@@ -2,9 +2,9 @@ package hexlet.code.games;
 
 import java.util.Random;
 
-public class EvenGame {
+public class Even {
     public static String evenGameRules = "Answer 'yes' if the number is even, otherwise answer 'no'.";
-    public static String[][] evenGame() {
+    public static String[][] even() {
         Random r = new Random();
         //2d massive 3 lines 2 columns
         //first column contains game expression that will be shown to user
