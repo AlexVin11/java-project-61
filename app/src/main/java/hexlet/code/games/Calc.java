@@ -7,15 +7,19 @@ public class Calc {
     public static String[][] calc() {
         Random r = new Random();
         char[] operators = {'+', '-', '*'};
+        int operatorsLength = operators.length;
         //2d massive 3 lines 2 columns
         //first column contains game expression that will be shown to user
         //second column contains correct answer
-        String[][] questionAndCorrectAnswer = new String[3][2];
+        int stringsInArray = 3;
+        int columnsInArray = 2;
+        String[][] questionAndCorrectAnswer = new String[stringsInArray][columnsInArray];
 
-        for (int i = 0; i < 3; i++) {
-            var firstNumber = r.nextInt(50) + 1;
-            var secondNumber = r.nextInt(50) + 1;
-            var charIndexGenerator = r.nextInt(3);
+        for (int i = 0; i < stringsInArray; i++) {
+            int numberBorder = 50;
+            var firstNumber = r.nextInt(numberBorder) + 1;
+            var secondNumber = r.nextInt(numberBorder) + 1;
+            var charIndexGenerator = r.nextInt(operatorsLength);
             int resultOfExpression = 0;
             String processedFirstNumber = Integer.toString(firstNumber);
             String processedSecondNumber = Integer.toString(secondNumber);
