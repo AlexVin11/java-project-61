@@ -47,10 +47,8 @@ public class App {
                 Engine.engine(argumentsPrimeGame, primeGameRules);
                 break;
             case 0 :
-                Cli.userGreet();
+                System.out.println("Exit was chosen");
                 break;
-                /*System.out.println("Exit was chosen");
-                break;*/
             default:
                 System.out.print("Unknown command.");
                 break;
