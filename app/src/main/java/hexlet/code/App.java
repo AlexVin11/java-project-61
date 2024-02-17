@@ -3,6 +3,7 @@ package hexlet.code;
 import hexlet.code.games.Calc;
 import hexlet.code.games.Even;
 import hexlet.code.games.Gcd;
+import hexlet.code.games.Progression;
 
 import java.util.Scanner;
 
@@ -13,8 +14,9 @@ public class App {
         String evenGameRules = Even.evenGameRules;
         String calcGameRules = Calc.calcGameRules;
         String gcdGameRules = Gcd.gcdGameRules;
+        String progressionGameRules = Progression.progressionGameRules;
         System.out.println("Please enter the game number and press Enter. ");
-        System.out.print(" 1. Greet \n 2. Even \n 3. Calc \n 4. GCD \n 0. Exit \n Your choice: ");
+        System.out.print(" 1. Greet \n 2. Even \n 3. Calc \n 4. GCD \n 5. Progression \n 0. Exit \n Your choice: ");
         int gameNumber = scanner.nextInt();
 
         switch (gameNumber) {
@@ -32,6 +34,10 @@ public class App {
             case 4 :
                 String[][] argumentsGcdGame = Gcd.gcd();
                 Engine.engine(argumentsGcdGame, gcdGameRules);
+                break;
+            case 5 :
+                String[][] argumentsProgressionGame = Progression.progression();
+                Engine.engine(argumentsProgressionGame, progressionGameRules);
                 break;
             case 0 :
                 System.out.println("Exit was chosen");
