@@ -12,7 +12,7 @@ public class Gcd {
         //second column contains correct answer
         int stringsInArray = 3;
         int columnsInArray = 2;
-        String[][] questionAndCorrectAnswer = new String[columnsInArray][stringsInArray];
+        String[][] questionAndCorrectAnswer = new String[stringsInArray][columnsInArray];
 
         for (int i = 0; i < stringsInArray; i++) {
             //random numbers from 1 to 50 generated and converted to String
