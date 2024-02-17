@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.Random;
 
 public class Progression {
-    private static final String PROGRESSIONGAMERULES = "What number is missing in the progression?";
+    public static String progressionGameRules = "What number is missing in the progression?";
     static final int STRINGSINARRAY = 3;
     static final int COLUMNSINARRAY = 2;
     static final int MAXNUMBEROFITEMS = 10;
@@ -57,9 +57,5 @@ public class Progression {
         }
 
         return questionAndCorrectAnswer;
-    }
-
-    public static String getGameRules() {
-        return PROGRESSIONGAMERULES;
     }
 }
