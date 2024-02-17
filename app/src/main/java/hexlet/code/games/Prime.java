@@ -4,19 +4,19 @@ import java.util.Random;
 
 public class Prime {
     public static String primeGameRules = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
-    static final int stringsInArray = 3;
-    static final int columnsInArray = 2;
-    static final int borderOfRandomNumber = 20;
+    static final int STRINGSINARRAY = 3;
+    static final int COLUMNSINARRAY = 2;
+    static final int BORDEROFRANDOMNUMBER = 20;
 
     public static String[][] prime() {
         Random r = new Random();
         //2d massive 3 lines 2 columns
         //first column contains game expression that will be shown to user
         //second column contains correct answer
-        String[][] questionAndCorrectAnswer = new String[stringsInArray][columnsInArray];
+        String[][] questionAndCorrectAnswer = new String[STRINGSINARRAY][COLUMNSINARRAY];
 
-        for (int i = 0; i < stringsInArray; i++) {
-            int numberInQuestion = r.nextInt(borderOfRandomNumber) + 1;
+        for (int i = 0; i < STRINGSINARRAY; i++) {
+            int numberInQuestion = r.nextInt(BORDEROFRANDOMNUMBER) + 1;
             String processedNumberInQuestion = Integer.toString(numberInQuestion);
             questionAndCorrectAnswer[i][0] = processedNumberInQuestion;
             boolean givenNumberIsPrime = false;
