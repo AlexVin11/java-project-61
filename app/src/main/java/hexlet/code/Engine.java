@@ -37,7 +37,7 @@ public class Engine {
         }
 
         if (winningCount == 3) {
-            System.out.println("Congratulation, " + userName + "!");
+            System.out.println("Congratulations, " + userName + "!");
         } else {
             System.out.println("'" + userAnswer + "' is wrong answer ;(. Correct answer was "
                     + "'" + arguments[i][1] + "'");
