@@ -16,7 +16,7 @@ public class Prime {
         String[][] questionAndCorrectAnswer = new String[STRINGSINARRAY][COLUMNSINARRAY];
 
         for (int i = 0; i < STRINGSINARRAY; i++) {
-            int numberInQuestion = r.nextInt(BORDEROFRANDOMNUMBER) + 1;
+            int numberInQuestion = r.nextInt(BORDEROFRANDOMNUMBER) + 2;
             String processedNumberInQuestion = Integer.toString(numberInQuestion);
             questionAndCorrectAnswer[i][0] = processedNumberInQuestion;
             boolean givenNumberIsPrime = false;
