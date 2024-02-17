@@ -20,33 +20,34 @@ public class App {
         System.out.println("Please enter the game number and press Enter. ");
         System.out.print(" 1. Greet \n 2. Even \n 3. Calc \n 4. GCD "
                 + "\n 5. Progression \n 6. Prime \n 0. Exit \n Your choice: ");
-        int gameNumber = scanner.nextInt();
+        //int gameNumber = scanner.nextInt();
+        String gameNumber = scanner.next();
 
         switch (gameNumber) {
-            case 1 :
+            case "1" :
                 Cli.userGreet();
                 break;
-            case 2 :
+            case "2" :
                 String[][] argumentsEvenGames = Even.even();
                 Engine.engine(argumentsEvenGames, evenGameRules);
                 break;
-            case 3 :
+            case "3" :
                 String[][] argumentsCalcGames = Calc.calc();
                 Engine.engine(argumentsCalcGames, calcGameRules);
                 break;
-            case 4 :
+            case "4" :
                 String[][] argumentsGcdGame = Gcd.gcd();
                 Engine.engine(argumentsGcdGame, gcdGameRules);
                 break;
-            case 5 :
+            case "5" :
                 String[][] argumentsProgressionGame = Progression.progression();
                 Engine.engine(argumentsProgressionGame, progressionGameRules);
                 break;
-            case 6 :
+            case "6" :
                 String[][] argumentsPrimeGame = Prime.prime();
                 Engine.engine(argumentsPrimeGame, primeGameRules);
                 break;
-            case 0 :
+            case "0" :
                 System.out.println("Exit was chosen");
                 break;
             default:
