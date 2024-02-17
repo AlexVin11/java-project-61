@@ -43,9 +43,12 @@ public class Progression {
                 }
             }
 
-            String question = Arrays.toString(processedProgressionMassive);
+            String progressionMassive = Arrays.toString(processedProgressionMassive);
+            String processedMassive = progressionMassive.replace("[", "");
+            String progression = processedMassive.replace("]", "");
+            String resultExpression = progression.replace(",", "");
             String correctAnswer = Integer.toString(resultProgression[indexOfHidedElement]);
-            questionAndCorrectAnswer[i][0] = question;
+            questionAndCorrectAnswer[i][0] = resultExpression;
             questionAndCorrectAnswer[i][1] = correctAnswer;
         }
 
