@@ -15,7 +15,7 @@ public class App {
         String evenGameRules = Even.evenGameRules;
         String calcGameRules = Calc.calcGameRules;
         String gcdGameRules = Gcd.gcdGameRules;
-        String progressionGameRules = Progression.progressionGameRules;
+        String progressionGameRules = Progression.getProgressionGameRules();
         String primeGameRules = Prime.primeGameRules;
         System.out.println("Please enter the game number and press Enter. ");
         System.out.print(" 1. Greet \n 2. Even \n 3. Calc \n 4. GCD "
