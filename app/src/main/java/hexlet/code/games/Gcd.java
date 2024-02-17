@@ -4,7 +4,7 @@ package hexlet.code.games;
 import java.util.Random;
 
 public class Gcd {
-    public static String gcdGameRules = "Find the greatest common divisor of given numbers.";
+    private static String gcdGameRules = "Find the greatest common divisor of given numbers.";
     static final int STRINGSINARRAY = 3;
     static final int COLUMNSINARRAY = 2;
     static final int BORDEROFRANDOMNUMBER = 20;
@@ -37,5 +37,9 @@ public class Gcd {
             continue;
         }
         return questionAndCorrectAnswer;
+    }
+
+    public static String getGcdGameRules() {
+        return gcdGameRules;
     }
 }

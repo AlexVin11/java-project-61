@@ -12,11 +12,11 @@ public class App {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         //gaming rules taken from the static variables in games
-        String evenGameRules = Even.evenGameRules;
-        String calcGameRules = Calc.calcGameRules;
-        String gcdGameRules = Gcd.gcdGameRules;
+        String evenGameRules = Even.getEvenGameRules();
+        String calcGameRules = Calc.getCalcGameRules();
+        String gcdGameRules = Gcd.getGcdGameRules();
         String progressionGameRules = Progression.getProgressionGameRules();
-        String primeGameRules = Prime.primeGameRules;
+        String primeGameRules = Prime.getPrimeGameRules();
         System.out.println("Please enter the game number and press Enter. ");
         System.out.print(" 1. Greet \n 2. Even \n 3. Calc \n 4. GCD "
                 + "\n 5. Progression \n 6. Prime \n 0. Exit \n Your choice: ");

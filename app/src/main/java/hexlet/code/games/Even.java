@@ -3,7 +3,7 @@ package hexlet.code.games;
 import java.util.Random;
 
 public class Even {
-    public static String evenGameRules = "Answer 'yes' if the number is even, otherwise answer 'no'.";
+    private static String evenGameRules = "Answer 'yes' if the number is even, otherwise answer 'no'.";
     static final int STRINGSINARRAY = 3;
     static final int COLUMNSINARRAY = 2;
     static final int MAXRANDOMNUMBERBORER = 100;
@@ -32,5 +32,9 @@ public class Even {
             questionAndCorrectAnswer[i][1] = correctAnswer;
         }
         return questionAndCorrectAnswer;
+    }
+
+    public static String getEvenGameRules() {
+        return evenGameRules;
     }
 }

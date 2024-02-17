@@ -3,7 +3,7 @@ package hexlet.code.games;
 import java.util.Random;
 
 public class Calc {
-    public static String calcGameRules = "What is the result of the expression?";
+    private static String calcGameRules = "What is the result of the expression?";
     static final int STRINGSINARRAY = 3;
     static final int COLUMNSINARRAY = 2;
     static final int BORDEROFNUMBER = 50;
@@ -46,5 +46,9 @@ public class Calc {
         }
 
         return questionAndCorrectAnswer;
+    }
+
+    public static String getCalcGameRules() {
+        return calcGameRules;
     }
 }
