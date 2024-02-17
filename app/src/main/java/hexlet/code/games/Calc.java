@@ -4,6 +4,9 @@ import java.util.Random;
 
 public class Calc {
     public static String calcGameRules = "What is the result of the expression?";
+    static final int STRINGSINARRAY = 3;
+    static final int COLUMNSINARRAY = 2;
+    static final int BORDEROFNUMBER = 50;
     public static String[][] calc() {
         Random r = new Random();
         char[] operators = {'+', '-', '*'};
@@ -11,14 +14,11 @@ public class Calc {
         //2d massive 3 lines 2 columns
         //first column contains game expression that will be shown to user
         //second column contains correct answer
-        int stringsInArray = 3;
-        int columnsInArray = 2;
-        String[][] questionAndCorrectAnswer = new String[stringsInArray][columnsInArray];
+        String[][] questionAndCorrectAnswer = new String[STRINGSINARRAY][COLUMNSINARRAY];
 
-        for (int i = 0; i < stringsInArray; i++) {
-            int numberBorder = 50;
-            var firstNumber = r.nextInt(numberBorder) + 1;
-            var secondNumber = r.nextInt(numberBorder) + 1;
+        for (int i = 0; i < STRINGSINARRAY; i++) {
+            var firstNumber = r.nextInt(BORDEROFNUMBER) + 1;
+            var secondNumber = r.nextInt(BORDEROFNUMBER) + 1;
             var charIndexGenerator = r.nextInt(operatorsLength);
             int resultOfExpression = 0;
             String processedFirstNumber = Integer.toString(firstNumber);
