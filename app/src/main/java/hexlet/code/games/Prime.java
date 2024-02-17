@@ -21,12 +21,12 @@ public class Prime {
 
             for (int j = 2; j <= numberInQuestion / 2; j++) {
                 if (numberInQuestion % j == 0) {
-                    givenNumberIsPrime = false;
+                    givenNumberIsPrime = true;
                     break;
                 }
             }
 
-            if (givenNumberIsPrime) {
+            if (!givenNumberIsPrime) {
                 correctAnswer = correctAnswer.append("yes");
             } else {
                 correctAnswer = correctAnswer.append("no");
