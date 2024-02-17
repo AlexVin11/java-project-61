@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Engine {
     //why is like that??
-    static final int GAMESTOWIN = 3;
+    //static final int GAMESTOWIN = 3;
 
     public static void engine(String[][] arguments, String gameRules) {
         Scanner scanner = new Scanner(System.in);
@@ -21,9 +21,9 @@ public class Engine {
         System.out.println("Hello, " + userName + "!");
         System.out.println(gameRules);
 
-        while (winningCount < GAMESTOWIN) {
+        while (winningCount < 3/*GAMESTOWIN*/) {
 
-            for (; i < GAMESTOWIN; i++) {
+            for (; i < 3/*GAMESTOWIN*/; i++) {
                 System.out.println("Question: " + arguments[i][0]);
                 System.out.print(answerRequest);
                 userAnswer = scanner.next();
@@ -39,7 +39,7 @@ public class Engine {
             break;
         }
 
-        if (winningCount == GAMESTOWIN) {
+        if (winningCount == 3/*GAMESTOWIN*/) {
             System.out.println("Congratulations, " + userName + "!");
         } else {
             System.out.println("'" + userAnswer + "' is wrong answer ;(. Correct answer was "
