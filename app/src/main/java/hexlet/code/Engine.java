@@ -40,7 +40,7 @@ public class Engine {
             System.out.println("Congratulations, " + userName + "!");
         } else {
             System.out.println("'" + userAnswer + "' is wrong answer ;(. Correct answer was "
-                    + "'" + arguments[i][1] + "'");
+                    + "'" + arguments[i][1] + "'.");
             System.out.println("Let's try again, " + userName + "!");
         }
     }
