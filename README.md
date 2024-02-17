@@ -5,4 +5,5 @@
 # Terminal records
 [EvenGame demo. asciinema record (step 5 of java-project-61)](https://asciinema.org/a/HplO0xv1QEMGmjgbKw6dbGQnO)\
 [CalcGame demo. asciinema record (step 6 of java-project-61)](https://asciinema.org/a/SlhRkHpnfpM71ai5eB49Wrjeh)\
-[GCDGame demo. asciinema record (step 7 of java-project-61)](https://asciinema.org/a/aBjcdHMATrWt3EcOt3PqzX1rG)
+[GCDGame demo. asciinema record (step 7 of java-project-61)](https://asciinema.org/a/aBjcdHMATrWt3EcOt3PqzX1rG)\
+[ProgressionGame demo. asciinema record (step 8 of java-project-61)](https://asciinema.org/a/74uLe35iOjqcMrtVDUYhjUSh5)
