@@ -5,21 +5,21 @@ import java.util.Random;
 
 public class Progression {
     public static String progressionGameRules = "What number is missing in the progression?";
+    static final int stringsInArray = 3;
+    static final int columnsInArray = 2;
+    static final int maxNumberOfItems = 10;
+    static final int minNumberOfItems = 5;
+    static final int maxProgressionDependencyBorder = 10;
+    static final int maxFirstNumberBorder = 20;
 
     public static String[][] progression() {
         Random r = new Random();
         //2d massive 3 lines 2 columns
         //first column contains game expression that will be shown to user
         //second column contains correct answer
-        int stringsInArray = 3;
-        int columnsInArray = 2;
         String[][] questionAndCorrectAnswer = new String[stringsInArray][columnsInArray];
 
         for (int i = 0; i < stringsInArray; i++) {
-            int maxNumberOfItems = 10;
-            int minNumberOfItems = 5;
-            int maxProgressionDependencyBorder = 10;
-            int maxFirstNumberBorder = 20;
             //random number from 5 to 9 (inclusive)
             //length of resultProgression massive
             int lengthOfProgression = r.nextInt(maxNumberOfItems - minNumberOfItems) + minNumberOfItems;
