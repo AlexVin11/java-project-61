@@ -3,6 +3,9 @@ package hexlet.code;
 import java.util.Scanner;
 
 public class Engine {
+    //why is like that??
+    static final int GAMESTOWIN = 3;
+
     public static void engine(String[][] arguments, String gameRules) {
         Scanner scanner = new Scanner(System.in);
         int winningCount = 0;
@@ -18,9 +21,9 @@ public class Engine {
         System.out.println("Hello, " + userName + "!");
         System.out.println(gameRules);
 
-        while (winningCount < 3) {
+        while (winningCount < GAMESTOWIN) {
 
-            for (; i < 3; i++) {
+            for (; i < GAMESTOWIN; i++) {
                 System.out.println("Question: " + arguments[i][0]);
                 System.out.print(answerRequest);
                 userAnswer = scanner.next();
@@ -36,7 +39,7 @@ public class Engine {
             break;
         }
 
-        if (winningCount == 3) {
+        if (winningCount == GAMESTOWIN) {
             System.out.println("Congratulations, " + userName + "!");
         } else {
             System.out.println("'" + userAnswer + "' is wrong answer ;(. Correct answer was "

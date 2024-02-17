@@ -11,20 +11,24 @@ public class Progression {
         //2d massive 3 lines 2 columns
         //first column contains game expression that will be shown to user
         //second column contains correct answer
-        String[][] questionAndCorrectAnswer = new String[3][2];
+        int stringsInArray = 3;
+        int columnsInArray = 2;
+        String[][] questionAndCorrectAnswer = new String[stringsInArray][columnsInArray];
 
-        for (int i = 0; i < 3; i++) {
+        for (int i = 0; i < stringsInArray; i++) {
             int maxNumberOfItems = 10;
             int minNumberOfItems = 5;
+            int maxProgressionDependencyBorder = 10;
+            int maxFirstNumberBorder = 20;
             //random number from 5 to 9 (inclusive)
             //length of resultProgression massive
             int lengthOfProgression = r.nextInt(maxNumberOfItems - minNumberOfItems) + minNumberOfItems;
             int[] resultProgression = new int[lengthOfProgression];
-            int progressionDependency = r.nextInt(10) + 1;
+            int progressionDependency = r.nextInt(maxProgressionDependencyBorder) + 1;
             //first element is inclusive, last element is exclusive
             int indexOfHidedElement = r.nextInt(lengthOfProgression);
             //first number in resultProgression (number generated from 1 to 20)
-            int firstNumberOfMassive = r.nextInt(20) + 1;
+            int firstNumberOfMassive = r.nextInt(maxFirstNumberBorder) + 1;
             resultProgression[0] = firstNumberOfMassive;
             String[] processedProgressionMassive = new String[lengthOfProgression];
 

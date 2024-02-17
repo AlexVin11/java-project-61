@@ -10,12 +10,15 @@ public class Gcd {
         //2d massive 3 lines 2 columns
         //first column contains game expression that will be shown to user
         //second column contains correct answer
-        String[][] questionAndCorrectAnswer = new String[3][2];
+        int stringsInArray = 3;
+        int columnsInArray = 2;
+        String[][] questionAndCorrectAnswer = new String[stringsInArray][columnsInArray];
 
-        for (int i = 0; i < 3; i++) {
+        for (int i = 0; i < stringsInArray; i++) {
             //random numbers from 1 to 50 generated and converted to String
-            int firstNumber = r.nextInt(20) + 1;
-            int secondNumber = r.nextInt(20) + 1;
+            int borderOfRandomNumber = 20;
+            int firstNumber = r.nextInt(borderOfRandomNumber) + 1;
+            int secondNumber = r.nextInt(borderOfRandomNumber) + 1;
             String processedFirstNumber = Integer.toString(firstNumber);
             String processedSecondNumber = Integer.toString(secondNumber);
             var expressionForCalculate = new StringBuilder();

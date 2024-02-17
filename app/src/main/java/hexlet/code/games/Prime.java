@@ -10,10 +10,13 @@ public class Prime {
         //2d massive 3 lines 2 columns
         //first column contains game expression that will be shown to user
         //second column contains correct answer
-        String[][] questionAndCorrectAnswer = new String[3][2];
+        int stringsInArray = 3;
+        int columnsInArray = 2;
+        String[][] questionAndCorrectAnswer = new String[stringsInArray][columnsInArray];
 
-        for (int i = 0; i < 3; i++) {
-            int numberInQuestion = r.nextInt(20) + 1;
+        for (int i = 0; i < stringsInArray; i++) {
+            int borderOfRandomNumber = 20;
+            int numberInQuestion = r.nextInt(borderOfRandomNumber) + 1;
             String processedNumberInQuestion = Integer.toString(numberInQuestion);
             questionAndCorrectAnswer[i][0] = processedNumberInQuestion;
             boolean givenNumberIsPrime = false;
