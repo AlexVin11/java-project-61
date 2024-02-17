@@ -5,18 +5,18 @@ import java.util.Random;
 
 public class Gcd {
     public static String gcdGameRules = "Find the greatest common divisor of given numbers.";
+    static final int stringsInArray = 3;
+    static final int columnsInArray = 2;
+    static final int borderOfRandomNumber = 20;
     public static String[][] gcd() {
         Random r = new Random();
         //2d massive 3 lines 2 columns
         //first column contains game expression that will be shown to user
         //second column contains correct answer
-        int stringsInArray = 3;
-        int columnsInArray = 2;
         String[][] questionAndCorrectAnswer = new String[stringsInArray][columnsInArray];
 
         for (int i = 0; i < stringsInArray; i++) {
             //random numbers from 1 to 50 generated and converted to String
-            int borderOfRandomNumber = 20;
             int firstNumber = r.nextInt(borderOfRandomNumber) + 1;
             int secondNumber = r.nextInt(borderOfRandomNumber) + 1;
             String processedFirstNumber = Integer.toString(firstNumber);
