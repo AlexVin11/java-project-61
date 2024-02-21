@@ -11,41 +11,29 @@ import java.util.Scanner;
 public class App {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        //gaming rules taken from the static variables in games
-        String evenGameRules = Even.getEvenGameRules();
-        String calcGameRules = Calc.getCalcGameRules();
-        String gcdGameRules = Gcd.getGcdGameRules();
-        String progressionGameRules = Progression.getProgressionGameRules();
-        String primeGameRules = Prime.getPrimeGameRules();
         System.out.println("Please enter the game number and press Enter. ");
         System.out.print(" 1. Greet \n 2. Even \n 3. Calc \n 4. GCD "
                 + "\n 5. Progression \n 6. Prime \n 0. Exit \n Your choice: ");
-        //int gameNumber = scanner.nextInt();
         String gameNumber = scanner.next();
 
         switch (gameNumber) {
             case "1" :
-                Cli.userGreet();
+                Cli.userGreeting();
                 break;
             case "2" :
-                String[][] argumentsEvenGames = Even.even();
-                Engine.engine(argumentsEvenGames, evenGameRules);
+                Even.even();
                 break;
             case "3" :
-                String[][] argumentsCalcGames = Calc.calc();
-                Engine.engine(argumentsCalcGames, calcGameRules);
+                Calc.calc();
                 break;
             case "4" :
-                String[][] argumentsGcdGame = Gcd.gcd();
-                Engine.engine(argumentsGcdGame, gcdGameRules);
+                Gcd.gcd();
                 break;
             case "5" :
-                String[][] argumentsProgressionGame = Progression.progression();
-                Engine.engine(argumentsProgressionGame, progressionGameRules);
+                Progression.progression();
                 break;
             case "6" :
-                String[][] argumentsPrimeGame = Prime.prime();
-                Engine.engine(argumentsPrimeGame, primeGameRules);
+                Prime.prime();
                 break;
             case "0" :
                 System.out.println("Exit was chosen");
