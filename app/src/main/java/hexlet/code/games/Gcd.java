@@ -1,6 +1,8 @@
 package hexlet.code.games;
 
 
+import hexlet.code.Engine;
+
 import java.util.Random;
 
 public class Gcd {
@@ -8,7 +10,7 @@ public class Gcd {
     static final int STRINGSINARRAY = 3;
     static final int COLUMNSINARRAY = 2;
     static final int BORDEROFRANDOMNUMBER = 20;
-    public static String[][] gcd() {
+    public static void gcd() {
         Random r = new Random();
         //2d massive 3 lines 2 columns
         //first column contains game expression that will be shown to user
@@ -36,10 +38,6 @@ public class Gcd {
             }
             continue;
         }
-        return questionAndCorrectAnswer;
-    }
-
-    public static String getGcdGameRules() {
-        return gcdGameRules;
+        Engine.engine(questionAndCorrectAnswer, gcdGameRules);
     }
 }
