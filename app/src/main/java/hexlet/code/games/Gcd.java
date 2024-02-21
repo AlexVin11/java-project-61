@@ -1,6 +1,5 @@
 package hexlet.code.games;
 
-
 import hexlet.code.Engine;
 
 import java.util.Random;
@@ -23,12 +22,11 @@ public class Gcd {
             int secondNumber = r.nextInt(BORDEROFRANDOMNUMBER) + 1;
             String processedFirstNumber = Integer.toString(firstNumber);
             String processedSecondNumber = Integer.toString(secondNumber);
-            var expressionForCalculate = new StringBuilder();
-            expressionForCalculate.append(processedFirstNumber);
-            expressionForCalculate.append(" ");
-            expressionForCalculate.append(processedSecondNumber);
-            //final expression
-            String expression = expressionForCalculate.toString();
+            var expressionToCalculate = new StringBuilder();
+            expressionToCalculate.append(processedFirstNumber);
+            expressionToCalculate.append(" ");
+            expressionToCalculate.append(processedSecondNumber);
+            String expression = expressionToCalculate.toString();
             questionAndCorrectAnswer[i][0] = expression;
 
             for (int j = 1; j <= firstNumber && j <= secondNumber; j++) {
@@ -36,8 +34,8 @@ public class Gcd {
                     questionAndCorrectAnswer[i][1] = Integer.toString(j);
                 }
             }
-            continue;
         }
+
         Engine.engine(questionAndCorrectAnswer, gcdGameRules);
     }
 }
