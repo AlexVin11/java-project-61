@@ -1,5 +1,7 @@
 package hexlet.code.games;
 
+import hexlet.code.Engine;
+
 import java.util.Random;
 
 public class Calc {
@@ -7,7 +9,7 @@ public class Calc {
     static final int STRINGSINARRAY = 3;
     static final int COLUMNSINARRAY = 2;
     static final int BORDEROFNUMBER = 50;
-    public static String[][] calc() {
+    public static void calc() {
         Random r = new Random();
         char[] operators = {'+', '-', '*'};
         int operatorsLength = operators.length;
@@ -45,10 +47,6 @@ public class Calc {
             questionAndCorrectAnswer[i][1] = Integer.toString(resultOfExpression);
         }
 
-        return questionAndCorrectAnswer;
-    }
-
-    public static String getCalcGameRules() {
-        return calcGameRules;
+        Engine.engine(questionAndCorrectAnswer, calcGameRules);
     }
 }
