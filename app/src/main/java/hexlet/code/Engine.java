@@ -3,7 +3,6 @@ package hexlet.code;
 import java.util.Scanner;
 
 public class Engine {
-    //why is like that??
     static final int GAMESTOWIN = 3;
 
     public static void engine(String[][] arguments, String gameRules) {
