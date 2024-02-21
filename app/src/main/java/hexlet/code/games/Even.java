@@ -1,5 +1,7 @@
 package hexlet.code.games;
 
+import hexlet.code.Engine;
+
 import java.util.Random;
 
 public class Even {
@@ -7,7 +9,7 @@ public class Even {
     static final int STRINGSINARRAY = 3;
     static final int COLUMNSINARRAY = 2;
     static final int MAXRANDOMNUMBERBORER = 100;
-    public static String[][] even() {
+    public static void even() {
         Random r = new Random();
         //2d massive 3 lines 2 columns
         //first column contains game expression that will be shown to user
@@ -31,10 +33,6 @@ public class Even {
             questionAndCorrectAnswer[i][0] = processedRandomNumber;
             questionAndCorrectAnswer[i][1] = correctAnswer;
         }
-        return questionAndCorrectAnswer;
-    }
-
-    public static String getEvenGameRules() {
-        return evenGameRules;
+        Engine.engine(questionAndCorrectAnswer, evenGameRules);
     }
 }

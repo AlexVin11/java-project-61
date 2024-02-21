@@ -1,5 +1,7 @@
 package hexlet.code.games;
 
+import hexlet.code.Engine;
+
 import java.util.Random;
 
 public class Prime {
@@ -8,7 +10,7 @@ public class Prime {
     static final int COLUMNSINARRAY = 2;
     static final int BORDEROFRANDOMNUMBER = 20;
 
-    public static String[][] prime() {
+    public static void prime() {
         Random r = new Random();
         //2d massive 3 lines 2 columns
         //first column contains game expression that will be shown to user
@@ -39,10 +41,6 @@ public class Prime {
             questionAndCorrectAnswer[i][1] = processedCorrectAnswer;
         }
 
-        return questionAndCorrectAnswer;
-    }
-
-    public static String getPrimeGameRules() {
-        return primeGameRules;
+        Engine.engine(questionAndCorrectAnswer, primeGameRules);
     }
 }
