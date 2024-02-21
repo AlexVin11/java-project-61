@@ -1,5 +1,7 @@
 package hexlet.code.games;
 
+import hexlet.code.Engine;
+
 import java.util.Arrays;
 import java.util.Random;
 
@@ -12,7 +14,7 @@ public class Progression {
     static final int MAXPROGRESSIONDEPENDENCYBORDER = 10;
     static final int MAXFIRSTNUMBERBORDER = 20;
 
-    public static String[][] progression() {
+    public static void progression() {
         Random r = new Random();
         //2d massive 3 lines 2 columns
         //first column contains game expression that will be shown to user
@@ -56,10 +58,6 @@ public class Progression {
             questionAndCorrectAnswer[i][1] = correctAnswer;
         }
 
-        return questionAndCorrectAnswer;
-    }
-
-    public static String getProgressionGameRules() {
-        return progressionGameRules;
+        Engine.engine(questionAndCorrectAnswer, progressionGameRules);
     }
 }
