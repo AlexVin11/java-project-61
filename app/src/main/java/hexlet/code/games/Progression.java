@@ -75,7 +75,7 @@ public class Progression {
         return questionAndCorrectAnswer;
     }
 
-    public static void progression1GameRules() {
+    public static void progressionGameExecuting() {
         String[][] questionAndCorrectAnswer = progressionResultArrayCreating();
         Engine.engine(questionAndCorrectAnswer, progressionGameRules);
     }
