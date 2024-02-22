@@ -21,19 +21,19 @@ public class App {
                 Cli.userGreeting();
                 break;
             case "2" :
-                Even.even();
+                Even.evenGameExecuting();
                 break;
             case "3" :
-                Calc.calc();
+                Calc.calcGameExecuting();
                 break;
             case "4" :
-                Gcd.gcd();
+                Gcd.gcdGameExecuting();
                 break;
             case "5" :
-                Progression.progression();
+                Progression.progressionGameExecuting();
                 break;
             case "6" :
-                Prime.prime();
+                Prime.primeGameExecuting();
                 break;
             case "0" :
                 System.out.println("Exit was chosen");
