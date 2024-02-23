@@ -6,7 +6,7 @@ import java.util.Arrays;
 import java.util.Random;
 
 public class Progression {
-    private static String progressionGameRules = "What number is missing in the progression?";
+    private static final String PROGRESSIONGAMERULES = "What number is missing in the progression?";
     static final int STRINGSINRESULTARRAY = 3;
     static final int COLUMNSINRESULTARRAY = 2;
     static final int MAXNUMBEROFITEMS = 10;
@@ -77,6 +77,6 @@ public class Progression {
 
     public static void progressionGameExecuting() {
         String[][] questionAndCorrectAnswer = progressionResultArrayCreating();
-        Engine.engine(questionAndCorrectAnswer, progressionGameRules);
+        Engine.engine(questionAndCorrectAnswer, PROGRESSIONGAMERULES);
     }
 }

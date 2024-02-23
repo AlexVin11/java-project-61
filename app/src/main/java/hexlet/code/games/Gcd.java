@@ -5,7 +5,7 @@ import hexlet.code.Engine;
 import java.util.Random;
 
 public class Gcd {
-    private static String gcdGameRules = "Find the greatest common divisor of given numbers.";
+    private static final String GCDGAMERULES = "Find the greatest common divisor of given numbers.";
     static final int STRINGSINRESULTARRAY = 3;
     static final int COLUMNSINRESULTARRAY = 2;
     static final int BORDEROFRANDOMNUMBER = 20;
@@ -55,6 +55,6 @@ public class Gcd {
 
     public static void gcdGameExecuting() {
         String[][] questionAndCorrectAnswer = gcdResultArrayCreating();
-        Engine.engine(questionAndCorrectAnswer, gcdGameRules);
+        Engine.engine(questionAndCorrectAnswer, GCDGAMERULES);
     }
 }

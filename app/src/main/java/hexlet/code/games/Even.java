@@ -5,7 +5,7 @@ import hexlet.code.Engine;
 import java.util.Random;
 
 public class Even {
-    private static String evenGameRules = "Answer 'yes' if the number is even, otherwise answer 'no'.";
+    private static final String EVENGAMERULES = "Answer 'yes' if the number is even, otherwise answer 'no'.";
     static final int STRINGSINRESULTARRAY = 3;
     static final int COLUMNSINRESULTARRAY = 2;
     static final int MAXRANDOMNUMBERBORER = 100;
@@ -52,6 +52,6 @@ public class Even {
 
     public static void evenGameExecuting() {
         String[][] questionAndCorrectAnswer = evenResultArrayCreating();
-        Engine.engine(questionAndCorrectAnswer, evenGameRules);
+        Engine.engine(questionAndCorrectAnswer, EVENGAMERULES);
     }
 }

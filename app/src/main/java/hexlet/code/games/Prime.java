@@ -5,7 +5,7 @@ import hexlet.code.Engine;
 import java.util.Random;
 
 public class Prime {
-    private static String primeGameRules = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
+    private static final String PRIMEGAMERULES = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
     static final int STRINGSINRESULTARRAY = 3;
     static final int COLUMNSINRESULTARRAY = 2;
     static final int BORDEROFRANDOMNUMBER = 20;
@@ -59,6 +59,6 @@ public class Prime {
 
     public static void primeGameExecuting() {
         String[][] questionAndCorrectAnswer = primeResultArrayCreating();
-        Engine.engine(questionAndCorrectAnswer, primeGameRules);
+        Engine.engine(questionAndCorrectAnswer, PRIMEGAMERULES);
     }
 }

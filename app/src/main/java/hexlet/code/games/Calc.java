@@ -5,7 +5,7 @@ import hexlet.code.Engine;
 import java.util.Random;
 
 public class Calc {
-    private static String calcGameRules = "What is the result of the expression?";
+    private static final String CALCGAMERULES = "What is the result of the expression?";
     static final int STRINGSINRESULTARRAY = 3;
     static final int COLUMNSINRESULTARRAY = 2;
     static final int BORDEROFNUMBER = 50;
@@ -66,6 +66,6 @@ public class Calc {
 
     public static void calcGameExecuting() {
         String[][] questionAndCorrectAnswer = calcResultArrayCreating();
-        Engine.engine(questionAndCorrectAnswer, calcGameRules);
+        Engine.engine(questionAndCorrectAnswer, CALCGAMERULES);
     }
 }
