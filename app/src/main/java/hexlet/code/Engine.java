@@ -3,7 +3,7 @@ package hexlet.code;
 import java.util.Scanner;
 
 public class Engine {
-    private static final int GAMESTOWIN = 3;
+    public static final int GAMESTOWIN = 3;
 
     public static void engine(String[][] arguments, String gameRules) {
         Scanner scanner = new Scanner(System.in);
