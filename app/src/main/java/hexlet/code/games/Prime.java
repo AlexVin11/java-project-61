@@ -6,6 +6,7 @@ import hexlet.code.Utils;
 public class Prime {
     private static final String PRIMEGAMERULES = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
     static final int MAXRANDOMNUMBER = 20;
+    static final int MINRANDOMNUMBER = 1;
     static final int STRINGSINGENERATEDARRAY = 1;
     static final int COLUMNSINGENERATEDARRAY = 2;
 
@@ -26,7 +27,7 @@ public class Prime {
         //first column contains game expression that will be shown to user
         //second column contains correct answer
         String[][] expressionAndCorrectAnswer = new String[STRINGSINGENERATEDARRAY][COLUMNSINGENERATEDARRAY];
-        int randomNumber = Utils.generateRandomInt(MAXRANDOMNUMBER);
+        int randomNumber = Utils.generateRandomInt(MINRANDOMNUMBER, MAXRANDOMNUMBER);
         String processedRandomNumber = Integer.toString(randomNumber);
         String correctAnswer = generatingCorrectPrimeAnswer(randomNumber);
 
