@@ -34,6 +34,7 @@ public class Calc1 {
             var firstNumber = Utils.generateRandomInt(BORDEROFNUMBER) + 1;
             var secondNumber = Utils.generateRandomInt(BORDEROFNUMBER) + 1;
             var charIndexGenerator = Utils.generateRandomInt(OPERATORS.length);
+            char chosenOperator = OPERATORS[charIndexGenerator];
             String processedFirstNumber = Integer.toString(firstNumber);
             String processedSecondNumber = Integer.toString(secondNumber);
             var expressionForCalculate = new StringBuilder();
@@ -44,10 +45,11 @@ public class Calc1 {
             expressionForCalculate.append(processedSecondNumber);
             //Final expression
             String expression = expressionForCalculate.toString();
-            String correctAnswer = String.valueOf(generatingCorrectCalcExpression(firstNumber, secondNumber, OPERATORS[charIndexGenerator]));
+            int correctAnswer = generatingCorrectCalcExpression(firstNumber, secondNumber, chosenOperator);
+            String processedCorrectAnswer = String.valueOf(correctAnswer);
 
             questionAndCorrectAnswer[i][0] = expression;
-            questionAndCorrectAnswer[i][1] = correctAnswer;
+            questionAndCorrectAnswer[i][1] = processedCorrectAnswer;
             i++;
         }
 
