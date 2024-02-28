@@ -11,7 +11,6 @@ public class Prime {
     static final int COLUMNSINGENERATEDARRAY = 2;
 
     public static String generatingCorrectPrimeAnswer(int randomNumber) {
-        boolean givenNumberIsPrime = false;
 
         for (int j = 2; j <= Math.sqrt(randomNumber); j++) {
             if (randomNumber % j == 0) {
