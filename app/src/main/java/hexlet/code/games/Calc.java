@@ -14,12 +14,19 @@ public class Calc {
     public static int generatingCorrectCalcAnswer(int firstNumber, int secondNumber, char operator) {
         int resultOfExpression = 0;
 
-        if (operator == '+') {
-            resultOfExpression = firstNumber + secondNumber;
-        } else if (operator == '-') {
-            resultOfExpression = firstNumber - secondNumber;
-        } else if (operator == '*') {
-            resultOfExpression = firstNumber * secondNumber;
+        switch (operator) {
+            case '+' :
+                resultOfExpression = firstNumber + secondNumber;
+                break;
+            case '-' :
+                resultOfExpression = firstNumber - secondNumber;
+                break;
+            case '*' :
+                resultOfExpression = firstNumber * secondNumber;
+                break;
+            default:
+                System.out.println("Unknown command.");
+                break;
         }
 
         return resultOfExpression;
