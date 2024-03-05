@@ -24,9 +24,6 @@ public class Even {
     }
 
     public static String[][] evenArrayCreating() {
-        //2d massive 1 line 2 columns
-        //first column contains game expression that will be shown to user
-        //second column contains correct answer
         String[][] questionAndCorrectAnswer = new String[STRINGSINGENERATEDARRAY][COLUMNSINGENERATEDARRAY];
 
         int randomNumber = Utils.generateRandomInt(MINRANDOMNUMBER, MAXRANDOMNUMBER);

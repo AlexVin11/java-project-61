@@ -22,11 +22,7 @@ public class Gcd {
     }
 
     public static String[][] gcdArrayCreating() {
-        //2d massive 1 lines 2 columns
-        //first column contains game expression that will be shown to user
-        //second column contains correct answer
         String[][] expressionAndCorrectAnswer = new String[STRINGSINGENERATEDARRAY][COLUMNSINGENERATEDARRAY];
-        //random numbers from 1 to 20 generated and converted to String
         int firstNumber = Utils.generateRandomInt(MINRANDOMNUMBER, MAXRANDOMNUMBER);
         int secondNumber = Utils.generateRandomInt(MINRANDOMNUMBER, MAXRANDOMNUMBER);
         String processedFirstNumber = Integer.toString(firstNumber);

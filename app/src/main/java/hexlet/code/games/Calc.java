@@ -33,9 +33,6 @@ public class Calc {
     }
 
     public static String[][] calcArrayCreating() {
-        //2d massive: 1 line and 2 columns
-        //first column contains game expression that will be shown to user
-        //second column contains correct answer
         String[][] questionAndCorrectAnswer = new String[STRINGSINGENERATEDARRAY][COLUMNSINGENERATEDARRAY];
         var firstNumber = Utils.generateRandomInt(MINRANDOMNUMBER, MAXRANDOMNUMBER);
         var secondNumber = Utils.generateRandomInt(MINRANDOMNUMBER, MAXRANDOMNUMBER);
@@ -50,7 +47,6 @@ public class Calc {
         expressionForCalculate.append(Character.toString(OPERATORS[charIndexGenerator]));
         expressionForCalculate.append(" ");
         expressionForCalculate.append(processedSecondNumber);
-        //Final expression
         String expression = expressionForCalculate.toString();
         int correctAnswer = generatingCorrectCalcAnswer(firstNumber, secondNumber, chosenOperator);
         String processedCorrectAnswer = String.valueOf(correctAnswer);
