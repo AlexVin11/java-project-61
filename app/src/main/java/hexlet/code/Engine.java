@@ -20,30 +20,27 @@ public class Engine {
         System.out.println("Hello, " + userName + "!");
         System.out.println(gameRules);
 
-        while (winningCount < GAMESTOWIN) {
+        for (; i < GAMESTOWIN; i++) {
+            System.out.println("Question: " + arguments[i][0]);
+            System.out.print(answerRequest);
+            userAnswer = scanner.next();
 
-            for (; i < GAMESTOWIN; i++) {
-                System.out.println("Question: " + arguments[i][0]);
-                System.out.print(answerRequest);
-                userAnswer = scanner.next();
-
-                if (userAnswer.equalsIgnoreCase(arguments[i][1])) {
-                    winningCount += 1;
-                    System.out.println(correctAnswerNotification);
-                } else {
-                    break;
-                }
+            if (userAnswer.equalsIgnoreCase(arguments[i][1])) {
+                winningCount += 1;
+                System.out.println(correctAnswerNotification);
             }
 
-            break;
-        }
+            if (!userAnswer.equalsIgnoreCase(arguments[i][1])) {
+                System.out.println("'" + userAnswer + "' is wrong answer ;(. Correct answer was "
+                        + "'" + arguments[i][1] + "'.");
+                System.out.println("Let's try again, " + userName + "!");
+                break;
+            }
 
-        if (winningCount == GAMESTOWIN) {
-            System.out.println("Congratulations, " + userName + "!");
-        } else {
-            System.out.println("'" + userAnswer + "' is wrong answer ;(. Correct answer was "
-                    + "'" + arguments[i][1] + "'.");
-            System.out.println("Let's try again, " + userName + "!");
+            if (winningCount == GAMESTOWIN) {
+                System.out.println("Congratulations, " + userName + "!");
+                break;
+            }
         }
     }
 }
