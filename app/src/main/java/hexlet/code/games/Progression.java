@@ -16,12 +16,28 @@ public class Progression {
     static final int STRINGSINGENERATEDARRAY = 1;
     static final int COLUMNSINGENERATEDARRAY = 2;
 
-    public static String[][] generatingCorrectProgressionAnswer(int[] progression, int indexOfHidedElement) {
+    public static int[] progressionGenerating(int firstElement, int progressionDependency, int progressionLength) {
+        int[] progression = new int[progressionLength];
+        progression[0] = firstElement;
+
+        for (int i = 1; i < progressionLength; i++) {
+            progression[i] = progression[i - 1] + progressionDependency;
+        }
+
+        return progression;
+    }
+
+    public static String[][] progressionArrayCreating() {
         String[][] expressionAndCorrectAnswer = new String[STRINGSINGENERATEDARRAY][COLUMNSINGENERATEDARRAY];
-        String progressionAsString = Arrays.toString(progression).replaceAll("[\\[\\]]", "");
+        int lengthOfProgression = Utils.generateRandomInt(MINNUMBEROFITEMS, MAXNUMBEROFITEMS);
+        int progressionDependency = Utils.generateRandomInt(MINPROGRESSIONDEPENDENCY, MAXPROGRESSIONDEPENDENCY);
+        int indexOfHidedElement = Utils.generateRandomInt(lengthOfProgression);
+        int firstNumberOfMassive = Utils.generateRandomInt(MINFIRSTNUMBERBORDER, MAXFIRSTNUMBERBORDER);
+
+        int[] progression = progressionGenerating(firstNumberOfMassive, progressionDependency, lengthOfProgression);
         String correctAnswer = Integer.toString(progression[indexOfHidedElement]);
         expressionAndCorrectAnswer[0][1] = correctAnswer;
-        //array of String created
+        String progressionAsString = Arrays.toString(progression).replaceAll("[\\[\\]]", "");
         var progressionElements = progressionAsString.split(", ");
         progressionElements[indexOfHidedElement] = "..";
         expressionAndCorrectAnswer[0][0] = String.join(" ", progressionElements);
@@ -29,37 +45,13 @@ public class Progression {
         return expressionAndCorrectAnswer;
     }
 
-    public static String[][] progressionArrayCreating() {
-        //2d massive 1 lines 2 columns
-        //first column contains game expression that will be shown to user
-        //second column contains correct answer
-        String[][] expressionAndCorrectAnswer = new String[STRINGSINGENERATEDARRAY][COLUMNSINGENERATEDARRAY];
-        int lengthOfProgression = Utils.generateRandomInt(MINNUMBEROFITEMS, MAXNUMBEROFITEMS);
-        int[] progression = new int[lengthOfProgression];
-        int progressionDependency = Utils.generateRandomInt(MINPROGRESSIONDEPENDENCY, MAXPROGRESSIONDEPENDENCY);
-        int indexOfHidedElement = Utils.generateRandomInt(lengthOfProgression);
-        //first number in resultProgression (number generated from 1 to 20)
-        int firstNumberOfMassive = Utils.generateRandomInt(MINFIRSTNUMBERBORDER, MAXFIRSTNUMBERBORDER);
-        progression[0] = firstNumberOfMassive;
-
-        for (int j = 1; j < lengthOfProgression; j++) {
-            progression[j] = progression[j - 1] + progressionDependency;
-        }
-
-        String[][] resultArray = generatingCorrectProgressionAnswer(progression, indexOfHidedElement);
-
-        return resultArray;
-    }
-
     public static void progressionGameExecuting() {
         String[][] questionAndCorrectAnswer = new String[Engine.GAMESTOWIN][COLUMNSINGENERATEDARRAY];
-        int i = 0;
 
-        while (i < Engine.GAMESTOWIN) {
+        for (int i = 0; i < Engine.GAMESTOWIN; i++) {
             String[][] processedArray = progressionArrayCreating();
             questionAndCorrectAnswer[i][0] = processedArray[0][0];
             questionAndCorrectAnswer[i][1] = processedArray[0][1];
-            i++;
         }
 
         Engine.engine(questionAndCorrectAnswer, PROGRESSIONGAMERULES);

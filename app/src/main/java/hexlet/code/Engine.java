@@ -11,7 +11,6 @@ public class Engine {
         String brainGamesGreetingMessage = "Welcome to the Brain Games!\nMay i have your name? ";
         String userName = "";
         String userAnswer = "";
-        int i = 0;
         String answerRequest = "Your answer: ";
         String correctAnswerNotification = "Correct!";
 
@@ -20,30 +19,27 @@ public class Engine {
         System.out.println("Hello, " + userName + "!");
         System.out.println(gameRules);
 
-        while (winningCount < GAMESTOWIN) {
+        for (int i = 0; i < GAMESTOWIN; i++) {
+            System.out.println("Question: " + arguments[i][0]);
+            System.out.print(answerRequest);
+            userAnswer = scanner.next();
 
-            for (; i < GAMESTOWIN; i++) {
-                System.out.println("Question: " + arguments[i][0]);
-                System.out.print(answerRequest);
-                userAnswer = scanner.next();
-
-                if (userAnswer.equalsIgnoreCase(arguments[i][1])) {
-                    winningCount += 1;
-                    System.out.println(correctAnswerNotification);
-                } else {
-                    break;
-                }
+            if (userAnswer.equalsIgnoreCase(arguments[i][1])) {
+                winningCount += 1;
+                System.out.println(correctAnswerNotification);
             }
 
-            break;
-        }
+            if (!userAnswer.equalsIgnoreCase(arguments[i][1])) {
+                System.out.println("'" + userAnswer + "' is wrong answer ;(. Correct answer was "
+                        + "'" + arguments[i][1] + "'.");
+                System.out.println("Let's try again, " + userName + "!");
+                break;
+            }
 
-        if (winningCount == GAMESTOWIN) {
-            System.out.println("Congratulations, " + userName + "!");
-        } else {
-            System.out.println("'" + userAnswer + "' is wrong answer ;(. Correct answer was "
-                    + "'" + arguments[i][1] + "'.");
-            System.out.println("Let's try again, " + userName + "!");
+            if (winningCount == GAMESTOWIN) {
+                System.out.println("Congratulations, " + userName + "!");
+                break;
+            }
         }
     }
 }

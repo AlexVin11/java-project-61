@@ -42,5 +42,7 @@ public class App {
                 System.out.print("Unknown command.");
                 break;
         }
+
+        scanner.close();
     }
 }
