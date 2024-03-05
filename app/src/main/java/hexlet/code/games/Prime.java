@@ -12,6 +12,10 @@ public class Prime {
 
     public static boolean isPrime(int randomNumber) {
 
+        if (randomNumber == 1) {
+            return false;
+        }
+
         for (int j = 2; j <= Math.sqrt(randomNumber); j++) {
             if (randomNumber % j == 0) {
                 return false;
