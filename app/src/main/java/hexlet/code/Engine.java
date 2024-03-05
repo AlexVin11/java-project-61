@@ -11,7 +11,6 @@ public class Engine {
         String brainGamesGreetingMessage = "Welcome to the Brain Games!\nMay i have your name? ";
         String userName = "";
         String userAnswer = "";
-        int i = 0;
         String answerRequest = "Your answer: ";
         String correctAnswerNotification = "Correct!";
 
@@ -20,7 +19,7 @@ public class Engine {
         System.out.println("Hello, " + userName + "!");
         System.out.println(gameRules);
 
-        for (; i < GAMESTOWIN; i++) {
+        for (int i = 0; i < GAMESTOWIN; i++) {
             System.out.println("Question: " + arguments[i][0]);
             System.out.print(answerRequest);
             userAnswer = scanner.next();
