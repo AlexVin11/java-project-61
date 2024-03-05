@@ -53,13 +53,11 @@ public class Progression {
 
     public static void progressionGameExecuting() {
         String[][] questionAndCorrectAnswer = new String[Engine.GAMESTOWIN][COLUMNSINGENERATEDARRAY];
-        int i = 0;
 
-        while (i < Engine.GAMESTOWIN) {
+        for (int i = 0; i < Engine.GAMESTOWIN; i++) {
             String[][] processedArray = progressionArrayCreating();
             questionAndCorrectAnswer[i][0] = processedArray[0][0];
             questionAndCorrectAnswer[i][1] = processedArray[0][1];
-            i++;
         }
 
         Engine.engine(questionAndCorrectAnswer, PROGRESSIONGAMERULES);
