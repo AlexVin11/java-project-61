@@ -5,27 +5,27 @@
 # Project overview
 Project has several console games to train the calculating skills.
 
-To run project:
+## To run project:
 
 make run-dist.
 
-EvenGame
+## EvenGame
 
 Some numbers will be shown to user, if shown number is even answer 'yes'- otherwise answer no.
 
-CalcGame
+## CalcGame
 
 Expression with 2 numbers will be shown to user to make calculations.
 
-GCDGame
+## GCDGame
 
 Two numbers will be shown- find greatest common divisor.
 
-ProgressionGame
+## ProgressionGame
 
 Progression with hided element will be shown to user. Find hided member of progression.
 
-PrimeGame
+## PrimeGame
 
 Numbers will be shown to user- is it prime number or not? 
 
