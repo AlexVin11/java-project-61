@@ -29,7 +29,7 @@ public class Engine {
                 System.out.println("Let's try again, " + userName + "!");
                 break;
             }
-            if (i == GAMESTOWIN) {
+            if (i == GAMESTOWIN - 1) {
                 System.out.println("Congratulations, " + userName + "!");
                 break;
             }
