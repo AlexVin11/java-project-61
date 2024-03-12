@@ -11,17 +11,14 @@ public class Prime {
     static final int COLUMNSINGENERATEDARRAY = 2;
 
     public static boolean isPrime(int randomNumber) {
-
         if (randomNumber == 1) {
             return false;
         }
-
         for (int j = 2; j <= Math.sqrt(randomNumber); j++) {
             if (randomNumber % j == 0) {
                 return false;
             }
         }
-
         return true;
     }
 
@@ -31,28 +28,23 @@ public class Prime {
         String processedRandomNumber = Integer.toString(randomNumber);
         boolean correctAnswer = isPrime(randomNumber);
         String processedCorrectAnswer = "";
-
         expressionAndCorrectAnswer[0][0] = processedRandomNumber;
         if (correctAnswer) {
             processedCorrectAnswer = "yes";
         } else {
             processedCorrectAnswer = "no";
         }
-
         expressionAndCorrectAnswer[0][1] = processedCorrectAnswer;
-
         return expressionAndCorrectAnswer;
     }
 
     public static void primeGameExecuting() {
         String[][] questionAndCorrectAnswer = new String[Engine.GAMESTOWIN][COLUMNSINGENERATEDARRAY];
-
         for (int i = 0; i < Engine.GAMESTOWIN; i++) {
             String[][] processedArray = primeArrayCreating();
             questionAndCorrectAnswer[i][0] = processedArray[0][0];
             questionAndCorrectAnswer[i][1] = processedArray[0][1];
         }
-
         Engine.engine(questionAndCorrectAnswer, PRIMEGAMERULES);
     }
 }
