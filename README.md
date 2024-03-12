@@ -7,7 +7,11 @@ Project has several console games to train the calculating skills.
 
 ## To run project:
 
-`make run-dist`
+(from App directory of project)
+
+```bash
+make run-dist
+```
 
 ## EvenGame
 
