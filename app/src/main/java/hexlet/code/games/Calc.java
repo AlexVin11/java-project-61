@@ -13,7 +13,6 @@ public class Calc {
 
     public static int generatingCorrectCalcAnswer(int firstNumber, int secondNumber, char operator) {
         int resultOfExpression = 0;
-
         switch (operator) {
             case '+' :
                 resultOfExpression = firstNumber + secondNumber;
@@ -28,7 +27,6 @@ public class Calc {
                 System.out.println("Unknown command.");
                 break;
         }
-
         return resultOfExpression;
     }
 
@@ -41,7 +39,6 @@ public class Calc {
         String processedFirstNumber = Integer.toString(firstNumber);
         String processedSecondNumber = Integer.toString(secondNumber);
         var expressionForCalculate = new StringBuilder();
-
         expressionForCalculate.append(processedFirstNumber);
         expressionForCalculate.append(" ");
         expressionForCalculate.append(Character.toString(OPERATORS[charIndexGenerator]));
@@ -52,19 +49,16 @@ public class Calc {
         String processedCorrectAnswer = String.valueOf(correctAnswer);
         questionAndCorrectAnswer[0][0] = expression;
         questionAndCorrectAnswer[0][1] = processedCorrectAnswer;
-
         return questionAndCorrectAnswer;
     }
 
     public static void calcGameExecuting() {
         String[][] questionAndCorrectAnswer = new String[Engine.GAMESTOWIN][COLUMNSINGENERATEDARRAY];
-
         for (int i = 0; i < Engine.GAMESTOWIN; i++) {
             String[][] processedArray = calcArrayCreating();
             questionAndCorrectAnswer[i][0] = processedArray[0][0];
             questionAndCorrectAnswer[i][1] = processedArray[0][1];
         }
-
         Engine.engine(questionAndCorrectAnswer, CALCGAMERULES);
     }
 }
