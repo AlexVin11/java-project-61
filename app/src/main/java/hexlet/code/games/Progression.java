@@ -19,11 +19,9 @@ public class Progression {
     public static int[] progressionGenerating(int firstElement, int progressionDependency, int progressionLength) {
         int[] progression = new int[progressionLength];
         progression[0] = firstElement;
-
         for (int i = 1; i < progressionLength; i++) {
             progression[i] = progression[i - 1] + progressionDependency;
         }
-
         return progression;
     }
 
@@ -33,7 +31,6 @@ public class Progression {
         int progressionDependency = Utils.generateRandomInt(MINPROGRESSIONDEPENDENCY, MAXPROGRESSIONDEPENDENCY);
         int indexOfHidedElement = Utils.generateRandomInt(lengthOfProgression);
         int firstNumberOfMassive = Utils.generateRandomInt(MINFIRSTNUMBERBORDER, MAXFIRSTNUMBERBORDER);
-
         int[] progression = progressionGenerating(firstNumberOfMassive, progressionDependency, lengthOfProgression);
         String correctAnswer = Integer.toString(progression[indexOfHidedElement]);
         expressionAndCorrectAnswer[0][1] = correctAnswer;
@@ -41,19 +38,16 @@ public class Progression {
         var progressionElements = progressionAsString.split(", ");
         progressionElements[indexOfHidedElement] = "..";
         expressionAndCorrectAnswer[0][0] = String.join(" ", progressionElements);
-
         return expressionAndCorrectAnswer;
     }
 
     public static void progressionGameExecuting() {
         String[][] questionAndCorrectAnswer = new String[Engine.GAMESTOWIN][COLUMNSINGENERATEDARRAY];
-
         for (int i = 0; i < Engine.GAMESTOWIN; i++) {
             String[][] processedArray = progressionArrayCreating();
             questionAndCorrectAnswer[i][0] = processedArray[0][0];
             questionAndCorrectAnswer[i][1] = processedArray[0][1];
         }
-
         Engine.engine(questionAndCorrectAnswer, PROGRESSIONGAMERULES);
     }
 }
