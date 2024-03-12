@@ -15,7 +15,6 @@ public class App {
         System.out.print(" 1. Greet \n 2. Even \n 3. Calc \n 4. GCD "
                 + "\n 5. Progression \n 6. Prime \n 0. Exit \n Your choice: ");
         String gameNumber = scanner.next();
-
         switch (gameNumber) {
             case "1" :
                 Cli.userGreeting();
@@ -42,7 +41,6 @@ public class App {
                 System.out.print("Unknown command.");
                 break;
         }
-
         scanner.close();
     }
 }
