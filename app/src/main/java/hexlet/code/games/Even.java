@@ -9,6 +9,7 @@ public class Even {
     static final int MINRANDOMNUMBER = 1;
     static final int STRINGSINGENERATEDARRAY = 1;
     static final int COLUMNSINGENERATEDARRAY = 2;
+
     public static boolean isEven(int randomNumber) {
         return (randomNumber % 2) == 0;
     }

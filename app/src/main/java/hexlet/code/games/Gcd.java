@@ -9,6 +9,7 @@ public class Gcd {
     static final int MINRANDOMNUMBER = 1;
     static final int STRINGSINGENERATEDARRAY = 1;
     static final int COLUMNSINGENERATEDARRAY = 2;
+
     public static int generatingCorrectGcdAnswer(int firstNumber, int secondNumber) {
         int gcdOfNumbers = 1;
         for (int j = 1; j <= firstNumber && j <= secondNumber; j++) {
